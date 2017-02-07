@@ -20,7 +20,8 @@ CREATE TABLE cad_cidades(
 CREATE TABLE cad_vagas(
 	guid INT NOT NULL AUTO_INCREMENT,
 	guid_cidade INT NOT NULL,
-	descricao VARCHAR(550) NOT NULL, 
+	descricao VARCHAR(550) NOT NULL,
+	data DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	NS INT NOT NULL,
 	PRIMARY KEY (guid),
 	FOREIGN KEY (guid_cidade) REFERENCES cad_cidades (guid)
