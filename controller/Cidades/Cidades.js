@@ -21,7 +21,7 @@ $.ajax({
   url:  'http://54.218.78.130:8090/vagasemprego/api/handlerGetAll.php',
   crossDomain: true,
   type: 'POST',
-  data: 'func=getAll',
+  data: 'crpt=d846076e2029fc6220155bc8a56d62f1',
   success: function(dados){
     $.each(dados, function(index, dado){
       var cidade    = new Cidade(dado);
@@ -30,5 +30,5 @@ $.ajax({
 });
 
 $('select').on('change', function() {
-  alert( this.value );
+  getVagas(this.value, this.text);
 })

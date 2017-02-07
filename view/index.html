@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../assets/css/framework7.material.colors.min.css">
   <!-- Path to your custom app styles-->
   <link rel="stylesheet" href="../assets/css/my-app.css">
+  <link rel="stylesheet" href="../assets/css/font-awesome.min.css">
 </head>
 <body class="theme-indigo">
   <!-- Status bar overlay for fullscreen mode-->
@@ -72,9 +73,26 @@
                 </ul>
               </div>
 
-              <div class="content-block-title">What about simple navigation?</div>
-              <div class="list-block">
-                <ul>
+              <div class="content-block-title">Vagas</div>
+              <div class="list-block media-list">
+                <ul id="lista">
+
+                  <script id="listar" type="text/x-handlebars-template">
+                    <li>
+                      <a href="#" class="item-content">
+                        <div class="item-media">
+                          <i class="fa fa-briefcase fa-3x theme-purple" aria-hidden="true"></i>
+                        </div>
+                        <div class="item-inner">
+                          <div class="item-title-row">
+                            <div class="item-title">{{qtde}} - {{descricao}}</div>
+                          </div>
+                          <div class="item-subtitle">Sexo: {{sexo}}</div>
+                          <div class="item-subtitle">Necessidade Especial: {{NS}}</div>
+                        </div>
+                      </a>
+                    </li>
+                  </script>
 
                 </ul>
               </div>
@@ -95,5 +113,6 @@
     <script src="../assets/js/handlebars-v4.0.5.js" charset="utf-8"></script>
     <!-- CONTROLLER -->
     <script src="../controller/Cidades/Cidades.min.js" charset="utf-8"></script>
+    <script src="../controller/Vagas/Vagas.min.js" charset="utf-8"></script>
   </body>
   </html>
