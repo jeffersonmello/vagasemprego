@@ -12,8 +12,8 @@ class Database{
 	 * Database class
 	 */
 	private $db_host = "localhost";  // Change as required
-	private $db_user = "admin";  // Change as required
-	private $db_pass = "c3df32ea11";  // Change as required
+	private $db_user = "user";  // Change as required
+	private $db_pass = "passsword";  // Change as required
 	private $db_name = "vagasemprego";	// Change as required
 
 	/*
