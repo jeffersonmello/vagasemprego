@@ -5,6 +5,7 @@ var Cidade = function(dado){
   var that            = this;
   this.guid           = dado.guid;
   this.descricao      = dado.descricao;
+  this.endeerecotel   = dado.endeerecotel;
   this.option         = this.Create();
 }
 
@@ -26,9 +27,15 @@ $.ajax({
     $.each(dados, function(index, dado){
       var cidade    = new Cidade(dado);
     });
+    getVagas(($('#select').val()), 'teste');
   }
 });
 
 $('select').on('change', function() {
   getVagas(this.value, this.text);
 })
+
+
+$( document ).ready(function() {
+
+});

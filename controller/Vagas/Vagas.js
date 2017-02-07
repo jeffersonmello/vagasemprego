@@ -24,6 +24,16 @@ var Vaga = function (dado){
 
   }
 
+  switch (this.NS) {
+    case '1':
+    this.NS = 'Sim';
+    break;
+
+    case '0':
+    this.NS =  'Não'
+    break;    
+  }
+
   this.item   = this.Create();
 }
 
@@ -37,6 +47,7 @@ Vaga.prototype.Create = function () {
 
 function getVagas(guidCidade, nomeCidade){
   lista.empty();
+  myApp.showIndicator();
   $.ajax({
     url:  'http://54.218.78.130:8090/vagasemprego/api/handlerVagas.php',
     crossDomain: true,
@@ -49,4 +60,5 @@ function getVagas(guidCidade, nomeCidade){
       });
     }
   });
+  myApp.hideIndicator();
 }
