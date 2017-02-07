@@ -18,6 +18,7 @@ Cidade.prototype.Create = function () {
 };
 
 
+
 $.ajax({
   url:  'http://54.218.78.130:8090/vagasemprego/api/handlerGetAll.php',
   crossDomain: true,
@@ -28,11 +29,13 @@ $.ajax({
       var cidade    = new Cidade(dado);
     });
     getVagas(($('#select').val()), 'teste');
+    $("#endereco").text($('#select').find(':selected').data('endereco'));
   }
 });
 
 $('select').on('change', function() {
   getVagas(this.value, this.text);
+  $("#endereco").text($('#select').find(':selected').data('endereco'));
 })
 
 

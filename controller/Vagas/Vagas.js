@@ -31,7 +31,7 @@ var Vaga = function (dado){
 
     case '0':
     this.NS =  'Não'
-    break;    
+    break;
   }
 
   this.item   = this.Create();
@@ -54,7 +54,6 @@ function getVagas(guidCidade, nomeCidade){
     type: 'POST',
     data: 'crpt=d846076e2029fc6220155bc8a56d62f1'+'&guidcidade='+guidCidade,
     success: function(dados){
-      console.log(dados);
       $.each(dados, function(index, dado){
         var vaga = new Vaga(dado);
       });
