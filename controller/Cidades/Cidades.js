@@ -40,5 +40,8 @@ $('select').on('change', function() {
 
 
 $( document ).ready(function() {
-
+  var mySearchbar = myApp.searchbar('.searchbar', {
+    searchList: '.media-list',
+    searchIn: '.item-title'
+});
 });
