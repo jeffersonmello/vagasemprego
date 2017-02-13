@@ -54,7 +54,8 @@ function getVagas(guidCidade, nomeCidade){
     type: 'POST',
     data: 'crpt=d846076e2029fc6220155bc8a56d62f1'+'&guidcidade='+guidCidade,
     success: function(dados){
-      console.log(dados);
+      if (dados == null || dados == undefined)
+        myApp.alert('Não foram encontradas vagas', ['Atenção']);
       $.each(dados, function(index, dado){
         var vaga = new Vaga(dado);
       });

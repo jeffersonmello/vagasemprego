@@ -32,6 +32,13 @@ CREATE TABLE cad_vagas(
 	ON DELETE CASCADE
 );
 
+CREATE TABLE cad_anuncios (
+	guid INT NOT NULL AUTO_INCREMENT,
+	nome VARCHAR(100) NOT NULL,
+	imagem VARCHAR(750) NOT NULL,
+	PRIMARY KEY (guid)
+);
+
 CREATE TABLE sys_key (
 	chave VARCHAR(255)
 )

@@ -86,13 +86,13 @@
                         <div class="item-input">
                           <select id="select">
                             <script id="template" type="text/x-handlebars-template">
+
                               <option data-endereco="{{endeerecotel}}" data-id="{{guid}}" value="{{guid}}">{{descricao}}</option>
+
                             </script>
                           </select>
                         </div>
                       </div>
-
-
                     </div>
                   </li>
 
@@ -125,11 +125,19 @@
                 </ul>
               </div>
 
-
             </div>
 
             <div class="content-block searchbar-not-found">
               Nenhuma vaga encontrada
+            </div>
+
+            <div id="anuncio" class="content-block">
+              <div class="content-block-title">
+                <h3>Anúncios</h3>
+              </div>
+              <script id="anuncioTemplate" type="text/x-handlebars-template">
+                <img class="ads-img" src="{{ imagem }}" >
+              </script>
             </div>
           </div>
         </div>
@@ -146,5 +154,6 @@
     <!-- CONTROLLER -->
     <script src="../controller/Cidades/Cidades.min.js" charset="utf-8"></script>
     <script src="../controller/Vagas/Vagas.min.js" charset="utf-8"></script>
+    <script src="../controller/Anuncios/Anuncio.min.js" charset="utf-8"></script>
   </body>
   </html>
